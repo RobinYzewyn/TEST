@@ -1,0 +1,24 @@
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--textColor);
+  font-variant-caps: small-caps;
+  position: relative;
+
+  &::after {
+    content: "";
+    background-image: url("../assets/img/balloon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 40vw;
+  }
+
+  /** [TODOLABO]: maak gebruik van nieuwe media query syntax */
+  /** [TODOLABO]: maak gebruik van de @custom-media uit vars.css (--only-medium-screen) */
+  /** Merk op dat deze media query op de h1 zal toegepast worden (gezien deze binnen de {} van de h1 zit) */
+  @media screen and (min-width: 500px) {
+    font-size: 16vw;
+  }
+}
